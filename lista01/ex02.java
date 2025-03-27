@@ -15,11 +15,12 @@ Alteração: permite que o tamanho da pirâmide seja alterado e preenche as casa
 
 public class Lista1Ex2 {
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         
-        int max = 50;
+        int max = 250;
         int linha = 1;
         int casa = 0;
+        int padding = 0;
         
         for (int i = 1; i <= max; i ++) {
             
@@ -36,8 +37,10 @@ public class Lista1Ex2 {
         if (casa < linha) {   
             max++;
             for (; casa < linha; casa++) {
-                System.out.print("X" + " ".repeat((max % 10) + 1));
+                padding = String.valueOf(max).length();
+                System.out.print("X" + " ".repeat(padding));
             }
         }
+        
     }
 }
